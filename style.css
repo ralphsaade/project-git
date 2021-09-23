@@ -1,25 +1,72 @@
 body {
-    background-color:black;
-    font-family:arial;
-    color:white;
-    text-align: center;  
-    }
-h1 {
-    color:grey;
-    font-family:verdana; 
-    }
+    background-color: black;
+    font-family: arial;
+    font-weight: bold;
+}
 .maindiv {
     background-color: white;
     color: black;
-    width: 300px;
-    padding:20px;
-    border-radius:25px;
-    text-align: center;
-}    
-.feedback {
-    text-align: left;
-    padding: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;    
+    width: 540px;
+    height: 340px;
+    padding: 10px 20px;
+    border-radius: 25px;
+
 }
-.facepad {
-    text-align: left;
+
+.maindiv header {
+    height: 20%;
+    vertical-align: top;
 }
+
+.maindiv footer {
+    height: 15%;
+    text-align: left;
+    vertical-align: bottom;
+}
+h1 {
+    color: grey;
+    font-family: verdana;
+    font-size: 26pt;
+    font-weight: bold;
+}
+button {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    font-family: arial;
+    color: black;
+}
+.form {
+    height: 65%;
+    align: center;
+}
+.form table {
+    margin-left: 15%;
+    margin-right: 5%;
+    width: 80%;
+    vertical-align: middle;
+    border-spacing: 0px 5px;
+}
+.form table td {
+    vertical-align: middle;
+}
+.form table td.left {
+    width: 150px;
+}
+.resultpanel {
+    margin-left: 15%;
+    margin-right: 5%;
+    width: 80%;
+}
+.hitext {
+    background-color: yellow;
+}
+
+
+
