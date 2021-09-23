@@ -1,23 +1,27 @@
-function compute() {
-    var principal = document.getElementById("principal").value;
+function compute()
+{
+    var principalObj = document.getElementById("principal");
+    var principal = principalObj.value;
+    if(principal <= 0)
+    {
+        alert("Enter a positive number.");
+        principalObj.focus();
+        return;
+    }
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
-    var year = new Date().getFullYear()+parseInt(years)
-    result = document.getElementById("result");
-    result.innerHTML=
-    "If you deposite" + " " + (principal) + " <br> " + 
-    "At an interest rate of" + " " + (rate) + " <br> "+ 
-    "You will recieve an amount of" + " " + (principal * years * rate / 100) + " <br>" + 
-    "In the year" + " " + (year);
+    var interest = principal * years * rate / 100.0;
+    var year = new Date().getFullYear() + parseInt(years);
+    var out = 'If you deposit <span class="hitext">' + principal + '</span>,<br/>'
+        + 'at an interest rate of <span class="hitext">' + rate + '%</span>.<br/>'
+        + 'You will receive an amount of <span class="hitext">' + interest + '</span>,<br/>'
+        + 'in the year <span class="hitext">' + year + '</span><br/>';
+    document.getElementById("result").innerHTML = out;
+        
 }
-function updateRate() {
+
+function updateRate()
+{
     var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval;
-}
-function validation() {
-    var num = /^[0]+$/;
-    if (principal.value.match(num))  {
-    alert("Enter Positive Number");
-    }else{null;
-         }
+    document.getElementById("rate_val").innerText = rateval + "%";
 }
